@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
+    container_name: proweb-app
+    ports:
+      - "8090:80"
+    working_dir: /var/www/html
+    volumes:
+      #aqui vc muda o caminho para o projeto que você quer rodar
+      - ./proweb-backend:/var/www/html
+      # vhost do Apache (substitui o antigo nginx/default.conf)
+      - ./.docker/apache/vhost.conf:/etc/apache2/sites-available/000-default.conf:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost/ || exit 1"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
