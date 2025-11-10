@@ -3,9 +3,7 @@
 Este setup executa qualquer projeto Laravel montado dentro de um container **PHP 8.2 + Apache**.  
 O container é construído pelo `Dockerfile` localizado em `.docker/php/Dockerfile`, que instala extensões comuns de Laravel, drivers do SQL Server (`sqlsrv`/`pdo_sqlsrv`) e Composer.
 
----
-
-## 📁 Estrutura relevante
+## Estrutura relevante
 
 ```
 .
@@ -25,7 +23,7 @@ O container é construído pelo `Dockerfile` localizado em `.docker/php/Dockerfi
 
 ---
 
-## ⚙️ Requisitos
+## Requisitos
 
 - Docker Desktop (ou engine compatível) instalado e em execução.
 - Git (opcional, se o projeto já estiver baixado).
@@ -33,7 +31,7 @@ O container é construído pelo `Dockerfile` localizado em `.docker/php/Dockerfi
 
 ---
 
-## 🧾 Versões utilizadas
+## Versões utilizadas
 
 - Docker Compose v2+
 - Imagem base: `php:8.2.4-apache` (Debian 12/bookworm)
@@ -45,7 +43,7 @@ O container é construído pelo `Dockerfile` localizado em `.docker/php/Dockerfi
 
 ---
 
-## 🚀 Subindo o ambiente
+## Subindo o ambiente
 
 1. Abra um terminal na raiz do repositório (substitua pelo caminho em sua máquina):
 
@@ -70,7 +68,7 @@ O container é construído pelo `Dockerfile` localizado em `.docker/php/Dockerfi
 
 ---
 
-## 📦 Dependências PHP
+## Dependências PHP
 
 Como o volume mapeia seu projeto Laravel, rode o Composer diretamente dentro do container para garantir a mesma versão de PHP/extensões:
 
@@ -87,7 +85,7 @@ docker compose exec app php artisan config:cache
 
 ---
 
-## 🧪 Testando o acesso
+## Testando o acesso
 
 - A aplicação estará disponível em `http://localhost:8090`.
 - Se ainda não carregar:
@@ -97,7 +95,7 @@ docker compose exec app php artisan config:cache
 
 ---
 
-## 🧹 Encerrando
+## Encerrando
 
 ```powershell
 docker compose down        # Para o container
@@ -106,7 +104,7 @@ docker compose down -v     # Para e remove volumes nomeados (cuidado com dados)
 
 ---
 
-## ℹ️ Observações
+## Observações
 
 - O atributo `version` no `docker-compose.yml` foi removido porque está obsoleto nas versões atuais do Compose.
 - Os avisos do Apache sobre `ServerName` podem ser ignorados ou ajustados adicionando `ServerName localhost` em `.docker/apache/vhost.conf`.
