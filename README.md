@@ -73,14 +73,15 @@ O container é construído pelo `Dockerfile` localizado em `.docker/php/Dockerfi
 Como o volume mapeia seu projeto Laravel, rode o Composer diretamente dentro do container para garantir a mesma versão de PHP/extensões:
 
 ```powershell
-docker compose run --rm app composer install
+docker exec -it nome-do-container-pasta-app bash
+composer install
+php artisan
 ```
 
 Outros comandos úteis:
 
 ```powershell
-docker compose exec app php artisan migrate
-docker compose exec app php artisan config:cache
+docker exec -it nome-do-container-pasta-app bash
 ```
 
 ---
