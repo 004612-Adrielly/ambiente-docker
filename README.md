@@ -48,7 +48,7 @@ O container é construído pelo `Dockerfile` localizado em `.docker/php/Dockerfi
 1. Abra um terminal na raiz do repositório (substitua pelo caminho em sua máquina):
 
    ```powershell
-   cd /caminho/para/ancora-proweb
+   cd /caminho/para/pasta-geral-projeto-com-docker
    ```
 
 2. Construa e suba o container:
