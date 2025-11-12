@@ -100,7 +100,6 @@ docker compose down -v     # Para e remove volumes nomeados (cuidado com dados)
 
 ## Observações
 
-- O atributo `version` no `docker-compose.yml` foi removido porque está obsoleto nas versões atuais do Compose.
 - Os avisos do Apache sobre `ServerName` podem ser ignorados ou ajustados adicionando `ServerName localhost` em `.docker/apache/vhost.conf`.
 - Ajuste permissões no container se necessário:
 
