@@ -75,7 +75,6 @@ Como o volume mapeia seu projeto Laravel, rode o Composer diretamente dentro do 
 ```powershell
 docker exec -it nome-do-container-pasta-app bash
 composer install
-php artisan
 ```
 
 Outros comandos úteis:
