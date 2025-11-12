@@ -77,12 +77,6 @@ docker exec -it nome-do-container-pasta-app bash
 composer install
 ```
 
-Outros comandos úteis:
-
-```powershell
-docker exec -it nome-do-container-pasta-app bash
-```
-
 ---
 
 ## Testando o acesso
