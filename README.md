@@ -11,7 +11,10 @@ O container é construído pelo `Dockerfile` localizado em `.docker/php/Dockerfi
 │   ├── apache
 │   │   └── vhost.conf
 │   └── php
+│       └── .gitattributes //docker-entrypoint.sh text eol=lf
+│       └── docker-entrypoint.sh
 │       └── Dockerfile
+│       └── php.ini
 ├── docker-compose.yml
 ├── seu-projeto-laravel
 └── (outras pastas)
